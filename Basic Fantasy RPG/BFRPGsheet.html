@@ -1,34 +1,45 @@
+<h1>Das Schwarze Auge</h1>
+<table border="1">
 
-<table>
-
-<!-- top block -->
-<tr><td colspan=2>
-  <table width=100%>
-    <tr>
-      <td width=1><b>Name</b></td>
-      <td colspan=3><input type=text width=50 style='width: 27em;' name="attr_name" /></td>
-      <td width=1>Sex</td>
-      <td><input type=text width=10 style='width: 5em;' name="attr_gender" /></td>
+<!-- top block --> 
+<tr><td colspan=3>     
+  <table border=1 width=100%>  
+    <tr> <!--Erste Zeile des Dokumentes-->
+      <td width=50%><b>Name</b></td> 
+      <td><input type=text size="30" name="attr_Name" /></td>
+      <td width=50%>Rasse</td>
+      <td><input type=text size="30" name="attr_Rasse" /></td>
       </td>
     </tr>
     <tr>
-      <td width=1>Race</td>
-      <td><input type=text width=20 style='width: 10em;' name="attr_race" /></td>
-      <td width=1>Class</td>
-      <td><input type=text width=20 style='width: 10em;' name="attr_class" /></td>
-      <td width=1>Level</td>
-      <td><input type=number width=5 style='width: 5em;' name="attr_level" /></td>
+      <td width=2>Kultur</td>
+      <td><input type=text size="30" name="attr_Kultur" /></td>
+      <td width=2>Profession</td>
+      <td><input type=text size="30" name="attr_Profession" /></td>
     </tr>
     <tr>
-      <td width=1>Height</td>
-      <td><input type=text width=10 style='width: 5em;' name="attr_height" /></td>
-      <td width=1>Weight</td>
-      <td><input type=text width=10 style='width: 5em;' name="attr_weight" /></td>
-      <td width=1>Age</td>
-      <td><input type=number width=10 style='width: 5em;' name="attr_age" /></td>
-    </tr>
+            <td width=50%>Stand</td>
+            <td><input type=text size="20" name="attr_Stand"></td>
+            <td width=50%>Sozialstatus</td>
+            <td><input type=text size="20" name="attr_Sozialstatus"></td>
+        </tr>
+         <tr>
+            <td>Geschlecht</td>
+            <td><input type=text size="50" name="attr_Geschlecht"></td>
+            <td>Alter</td>
+            <td><input type=text size="10" name="attr_Alter"></td>
+        </tr>
+        <tr>
+            <td>Grösse</td>
+            <td><input type=text size="50" name="attr_Groesse"></td>
+            <td>Gewicht</td>
+            <td><input type=text size="20" name="attr_Gewicht"></td>
+        </tr>
   </table>
 </td></tr>
+
+
+
 
 <tr><td valign=top>
 <!-- column 1 -->
@@ -37,40 +48,40 @@
     <table width=100%>
       <thead>
       <tr>
-        <td>Attribute</td>
-        <td width=1>Value</td>
-        <td width=1>Bonus</td>
+        <td><b>Eigenschaften</b></td>
       </tr>
       </thead>
       <tr>
-        <td>Strength</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_STR"/></td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_STRbonus"/></td>
+        <td>Mut</td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_MU"/><button type=roll value="/roll 1d20<@{MU}+?{Modifier|0} Mutprobe"></button></td>
       </tr>
       <tr>
-        <td>Intelligence</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_INT"/></td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_INTbonus"/></td>
+        <td>Klugheit</td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_KL"/><button type=roll value="/roll 1d20<@{KL}+?{Modifier|0} Klugheitsprobe"></button></td>
       </tr>
       <tr>
-        <td>Wisdom</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_WIS"/></td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_WISbonus"/></td>
-      </tr>
-      <tr>
-        <td>Dexterity</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_DEX"/></td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_DEXbonus"/></td>
-      </tr>
-      <tr>
-        <td>Constitution</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_CON"/></td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_CONbonus"/></td>
+        <td>Intuition</td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_IN"/><button type=roll value="/roll 1d20<@{IN}+?{Modifier|0} Intuitionsprobe"></button></td>
       </tr>
       <tr>
         <td>Charisma</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_CHA"/></td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_CHAbonus"/></td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_CH"/><button type=roll value="/roll 1d20<@{CH}+?{Modifier|0} Charismaprobe"></button></td>
+      </tr>
+      <tr>
+        <td>Fingerfertigkeit</td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_FF"/><button type=roll value="/roll 1d20<@{FF}+?{Modifier|0} Fingerfertigkeitsprobe"></button></td>
+      </tr>
+      <tr>
+        <td>Gewandheit</td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_GE"/><button type=roll value="/roll 1d20<@{GE}+?{Modifier|0} Gewandheitsprobe"></button></td>
+      </tr>
+      <tr>
+        <td>Konstitution</td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_KO"/><button type=roll value="/roll 1d20<@{KO}+?{Modifier|0} Konstitutionsprobe" ></button></td>
+      </tr>
+      <tr>
+        <td>Körperkraft</td>
+        <td><input type=number width=5 style='width: 5em;' name="attr_KK"/><button type=roll value="/roll 1d20<@{KK}+?{Modifier|0} Körperkraftprobe"></button></td>
       </tr>
     </table>
   </div>
@@ -79,53 +90,63 @@
 <!-- column 2 -->
 
   <div class=sheet-formblock>
-    <b>Combat</b>
+    <b>Basiswerte</b>
 
     <table width=100%>
 
     <tr>
-      <td>AC</td>
+      <td>Lebenspunkte</td>
       <td>
-        <input name="attr_ac" style="width: 14em;" type="text">
+        <input type="number" name="attr_LE" style="width: 5em;" value="(@{KO}+@{KO}+@{KK})/2" disabled=true>
     </td>
     </tr>
 
     <tr>
-      <td>HP</td>
+      <td>Ausdauer</td>
       <td>
-      <input name="attr_hp_max" style="width: 6em;" type="text">
-      &nbsp;
-      <input name="attr_hp_current" style="width: 7em;" type="text">
+      <input name="attr_Ausdauer" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KO}+@{GE})/2">
     </td>
     </tr>
 
     <tr>
-      <td>AB</td>
+      <td>Astralenergie</td>
       <td>
-      <input name="attr_ab_normal" style="width: 14em;" type="text">
+      <input name="attr_ASP" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{IN}+@{CH})/2">
       </td>
     </tr>
 
     <tr>
-      <td class="sheet-nowrap">&nbsp; Melee</td>
+      <td>Magieresistenz</td>
       <td>
-      <input name="attr_ab_melee" style="width: 14em;" type="number" 
-        value="@{ab_normal}+@{STRbonus}" disabled=true>
+      <input name="attr_MR" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KL}+@{KO})/5">
       </td>
     </tr>
 
     <tr>
-      <td class="sheet-nowrap">&nbsp; Missile</td>
+      <td>INI-Basiswert</td>
       <td>
-      <input name="attr_ab_missile" style="width: 14em;" type="number" 
-        value="@{ab_normal}+@{DEXbonus}" disabled=true>
+      <input name="attr_INIBasis" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{MU}+@{IN}+@{GE})/5">
       </td>
     </tr>
 
     <tr>
-      <td>Move</td>
+      <td>AT-Basiswert</td>
       <td>
-      <input name="attr_movement" style="width: 14em;" type="text">
+      <input name="attr_ATBasis" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{GE}+@{KK})/5">
+      </td>
+    </tr>
+
+    <tr>
+      <td>PA-Basiswert</td>
+      <td>
+      <input name="attr_PABasis" style="width: 5em;" type="number" disabled=true value="(@{IN}+@{GE}+@{KK})/5">
+      </td>
+    </tr>
+
+    <tr>
+      <td>FK-Basiswert</td>
+      <td>
+      <input name="attr_FKBasis" style="width: 5em;" type="number" disabled=true value="(@{IN}+@{FF}+@{KK})/5">
       </td>
     </tr>
 
@@ -135,259 +156,189 @@
 
 </td></tr>
 
+
 <tr><td valign=top colspan=2>
-
-  <b>Weapons</b>
-  <br>
-  <b style='display: inline-block; width: 10em;'>Name</b>
-  <b style='display: inline-block; width: 5em;'>Total AB</b>
-  <b style='display: inline-block; width: 5em;'>Damage</b>
-  <b style='display: inline-block; width: 10em;'>Range</b>
-  <b style='display: inline-block; width: 10em;'>Notes</b>
-  <br>
-  <fieldset class=repeating_weapons>
-    <input type=text name=attr_weaponname style='width: 10em;'>
-    <input type=text name=attr_weaponab style='width: 5em;'>
-    <input type=text name=attr_weapondamage style='width: 5em;'>
-    <input type=text name=attr_weaponrange style='width: 10em;'>
-    <input type=text name=attr_weaponnotes style='width: 10em;'>
-  </fieldset>
-
-</td></tr>
-
-<tr><td valign=top>
 <!-- column 1 -->
-
+<div class=formblock>
+    <b>Vermögen</b>
+    <br>
+    <table>
+       <td>
+          <tb>Dukaten</tb> 
+          <tb><input type=number></tb>
+       </td> 
+       <td>
+          <tb>Silbertaler</tb> 
+          <tb><input type=number></tb>
+       </td>
+       <td>
+          <tb>Heller</tb> 
+          <tb><input type=number></tb>
+       </td> 
+       <td>
+          <tb>Kreuzer</tb> 
+          <tb><input type=number></tb>
+       </td> 
+    </table>
+    
+  </div>
   <div class=formblock>
     <b>Equipment</b>
     <br>
-    <textarea name="attr_equipment"></textarea>
+    <textarea cols="30" name="attr_Equipment"></textarea>
   </div>
 
-  <div class=formblock>
-    <b>Thief Abilities</b>
-    <table width=100% class=thiefabilities>
-      <tbody>
-        <tr>
-          <td width="99%">Open Locks</td>
-          <td width="1">
-            <input name="attr_openlocks" type="text">
-          </td>
-          <td width="1"><button type=roll value="/roll 1d100<@{openlocks}"></button></td>
-        </tr>
-        <tr>
-          <td>Remove Traps</td>
-          <td><input name="attr_removetraps" type="text"></td>
-          <td><button type=roll value="/roll 1d100<@{removetraps}"></button></td>
-        </tr>
-        <tr>
-          <td>Pick Pockets</td>
-          <td><input name="attr_pickpockets" type="text"></td>
-          <td><button type=roll value="/roll 1d100<@{pickpockets}"></button></td>
-        </tr>
-        <tr>
-          <td>Move Silently</td>
-          <td><input name="attr_movesilently" type="text"></td>
-          <td><button type=roll value="/roll 1d100<@{movesilently}"></button></td>
-        </tr>
-        <tr>
-          <td>Climb Walls</td>
-          <td><input name="attr_climbwalls" type="text"></td>
-          <td><button type=roll value="/roll 1d100<@{climbwalls}"></button></td>
-        </tr>
-        <tr>
-          <td>Hide</td>
-          <td><input name="attr_hide" type="text"></td>
-          <td><button type=roll value="/roll 1d100<@{hide}"></button></td>
-        </tr>
-        <tr>
-          <td>Listen</td>
-          <td><input name="attr_listen" type="text"></td>
-          <td><button type=roll value="/roll 1d100<@{listen}"></button></td>
-        </tr>
-    </tbody>
-    </table>
-  </div>
 
-  <div class=formblock>
-    <b>Spells</b>
-    <table width=95% class=spelltable>
-      <tr>
-        <td style='text-align: left;'>Level</td>
-        <td width=1>1</td>
-        <td width=1>2</td>
-        <td width=1>3</td>
-      </tr>
-      <tr>
-        <td style='text-align: left;'>Number</td>
-        <td><input type="number" name="attr_level1spells" class=shortnum></td>
-        <td><input type="number" name="attr_level2spells" class=shortnum></td>
-        <td><input type="number" name="attr_level3spells" class=shortnum></td>
-      </tr>
-      <tr>
-        <td style='text-align: left;'>Level</td>
-        <td width=1>4</td>
-        <td width=1>5</td>
-        <td width=1>6</td>
-      </tr>
-      <tr>
-        <td style='text-align: left;'>Number</td>
-        <td><input type="number" name="attr_level4spells" class=shortnum></td>
-        <td><input type="number" name="attr_level5spells" class=shortnum></td>
-        <td><input type="number" name="attr_level6spells" class=shortnum></td>
-      </tr>
-    </table>
-    <textarea name="attr_spells"></textarea>
-  </div>
 
-</td><td valign=top>
-<!-- column 2 -->
+<table border=1>
+<tr><td valign=top colspan=2>
+    <h2>Talente</h2>
+    <h3>Kampftechniken</h3>
+     <b style='display: inline-block; width: 16em;'>Technik</b>
+     <b style='display: inline-block; width: 3em;'>AT</b>
+     <b style='display: inline-block; width: 3em;'>PA</b>
+     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <br>
+      <fieldset class=repeating_Kampftechnik>
+        <input type=text name=attr_TechnikName style='width: 15em;'>
+        <input type=number name=attr_AT style='width: 3em;'>
+        <input type=number name=attr_PA style='width: 3em;'>
+        <input type=number name=attr_TaW style='width: 5em;'>
+      </fieldset>
+      <br>
 
-  <div class=formblock>
-    <b>Money</b>
-    <br>
-    <textarea name="attr_money"></textarea>
-  </div>
+    <h3>Körperliche Talente</h3>
+     <b style='display: inline-block; width: 22em;'>Talent</b>
+     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <br>
+      <fieldset class=repeating_KoerperlicheTalente>
+        <input type=text name=attr_TalentName style='width: 21em;'>
+        <input type=number name=attr_TaW style='width: 5em;'>
+      </fieldset>
 
-  <div class=formblock>
-    <b>Saving Throws</b>
-    <table class="sheet-savingthrows" style="width: 100%;">
-      <tr>
-        <td width="99%">
-          Death Ray or Poison
-        </td>
-        <td width="1">
-          <input name="attr_deathrayorpoison" type="number">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{deathrayorpoison}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Magic Wands
-        </td>
-        <td>
-          <input name="attr_magicwands" type="number">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{magicwands}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Paralysis or Turn to Stone
-        </td>
-        <td>
-          <input name="attr_paralysispetrification" type="number">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{paralysispetrification}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Dragon Breath
-        </td>
-        <td>
-          <input name="attr_dragonbreath" type="number">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{dragonbreath}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Rods, Staves, and Spells
-        </td>
-        <td>
-          <input name="attr_rodsstavesspells" type="number">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{rodsstavesspells}"></button></td>
-      </tr>
-    </table>
-  </div>
+    <h3>Gesellschaftliche Talente</h3>
+     <b style='display: inline-block; width: 22em;'>Talent</b>
+     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <br>
+      <fieldset class=repeating_GesellschaftlicheTalente>
+        <input type=text name=attr_TalentName style='width: 21em;'>
+        <input type=number name=attr_TaW style='width: 5em;'>
+      </fieldset>
+</td>
+<td>
+    <h3>Natur-Talente</h3>
+     <b style='display: inline-block; width: 22em;'>Talent</b>
+     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <br>
+      <fieldset class=repeating_NaturTalente>
+        <input type=text name=attr_TalentName style='width: 21em;'>
+        <input type=number name=attr_TaW style='width: 5em;'>
+      </fieldset>
+      
+    <h3>Wissenstalente</h3>
+     <b style='display: inline-block; width: 22em;'>Talent</b>
+     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <br>
+      <fieldset class=repeating_NaturTalente>
+        <input type=text name=attr_TalentName style='width: 21em;'>
+        <input type=number name=attr_TaW style='width: 5em;'>
+      </fieldset>
+      
+    <h3>Sprachen & Schriften</h3>
+     <b style='display: inline-block; width: 22em;'>Talent</b>
+     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <br>
+      <fieldset class=repeating_Sprachen>
+        <input type=text name=attr_TalentName style='width: 21em;'>
+        <input type=number name=attr_TaW style='width: 5em;'>
+      </fieldset>
+      
+     <h3>Handwerkliche Talente</h3>
+     <b style='display: inline-block; width: 22em;'>Talent</b>
+     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <br>
+      <fieldset class=repeating_HandwerklicheTalente>
+        <input type=text name=attr_TalentName style='width: 21em;'>
+        <input type=number name=attr_TaW style='width: 5em;'>
+      </fieldset>  
+</td> 
+    
+</table>
 
-  <div class=formblock>
-    <b>Turn Undead</b>
-    <table class="sheet-turnundead" style="width: 100%;">
-      <tr>
-        <td width="99%">
-          Skeleton
-        </td>
-        <td width="1">
-          <input name="attr_turnskeleton" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnskeleton}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Zombie
-        </td>
-        <td>
-          <input name="attr_turnzombie" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnzombie}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Ghoul
-        </td>
-        <td>
-          <input name="attr_turnghoul" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnghoul}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Wight
-        </td>
-        <td>
-          <input name="attr_turnwight" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnwight}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Wraith
-        </td>
-        <td>
-          <input name="attr_turnwraith" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnwraith}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Mummy
-        </td>
-        <td>
-          <input name="attr_turnmummy" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnmummy}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Spectre
-        </td>
-        <td>
-          <input name="attr_turnspectre" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnspectre}"></button></td>
-      </tr>
-      <tr>
-        <td>
-          Vampire
-        </td>
-        <td>
-          <input name="attr_turnvampire" type="text">
-        </td>
-        <td width=1><button type=roll value="/roll 1d20>@{turnvampire}"></button></td>
-      </tr>
-    </table>
-  </div>
+<tr><td valign=top colspan=2>
 
-  <div class=formblock>
-    <b>Notes</b>
-    <br>
-    <textarea name="attr_notes"></textarea>
-  </div>
+  <h2>Waffen & Kampfwerte</h2>
+  <br>
+  <b style='display: inline-block; width: 10em;'>Nahkampfwaffe</b>
+  <b style='display: inline-block; width: 7em;'>TP</b>
+  <b style='display: inline-block; width: 8.5em;'>TP/KK</b>
+  <b style='display: inline-block; width: 5em;'>WM</b>
+  <b style='display: inline-block; width: 5em;'>AT</b>
+  <b style='display: inline-block; width: 5em;'>PA</b>
+  <br>
+  <fieldset class=repeating_NKW>
+    <input type=text name=attr_NKWName style='width: 10em;'>
+    <input type=text name=attr_TP style='width: 7em;'>
+    <input type=text name=attr_TPKK style='width: 5em;'>
+    <input type=number name=attr_WM1 style='width: 4em;'>
+    <input type=number name=attr_WM2 style='width: 4em;'>
+    <input type=number name=attr_AT style='width: 5em;'>
+    <input type=number name=attr_PA style='width: 5em;'>
+  </fieldset>
+  
+  
+  <br>
+  <b style='display: inline-block; width: 10em;'>Fernkampfwaffe</b>
+  <b style='display: inline-block; width: 7em;'>TP</b>
+  <b style='display: inline-block; width: 10em;'>Entfernung</b>
+  <b style='display: inline-block; width: 10em;'>TP/Entfernung</b>
+  <b style='display: inline-block; width: 5em;'>FK</b>
+  <b style='display: inline-block; width: 5em;'>Geschosse</b>
+  <br>
+  <fieldset class=repeating_FKW>
+    <input type=text name=attr_FKWName style='width: 10em;'>
+    <input type=text name=attr_TP style='width: 7em;'>
+    <input type=text name=attr_Entfernung style='width: 10em;'>
+    <input type=text name=attr_TPEntfernung style='width: 10em;'>
+    <input type=number name=attr_FK style='width: 5em;'>
+    <input type=number name=attr_Geschosse style='width: 5em;'>
+  </fieldset>
+
+  <br>
+  <b style='display: inline-block; width: 13.5em;'>Schild / Parierwaffe</b>
+  <b style='display: inline-block; width: 5em;'>WM</b>
+  <b style='display: inline-block; width: 5em;'>PA</b>
+  <br>
+  <fieldset class=repeating_Schild>
+    <input type=text name=attr_SchildName style='width: 10em;'>
+    <input type=number name=attr_WM1 style='width: 4em;'>
+    <input type=number name=attr_WM2 style='width: 4em;'>
+    <input type=number name=attr_PAg style='width: 5em;'>
+  </fieldset>
+<br>
+<b style='display: inline-block; width: 16em;'>Rüstung</b>
+<b style='display: inline-block; width: 5em;'>RS</b>
+<br>
+<input type=text name=attr_Ruestung1 style='width: 15em;'>
+<input type=number name=attr_Ruestung1RS style='width: 5;' value=0>
+
+<br>
+<input type=text name=attr_Ruestung2 style='width: 15em;'>
+<input type=number name=attr_Ruestung2RS style='width: 5;' value=0>
+<br>
+<input type=text name=attr_Ruestung3 style='width: 15em;'>
+<input type=number name=attr_Ruestung3RS style='width: 5;' value=0>
+<br>
+<input type=text name=attr_Ruestung4 style='width: 15em;'>
+<input type=number name=attr_Ruestung4RS style='width: 5;' value=0>
+<br>
+<b style='display: inline-block; width: 15em;'>&nbsp; Summe</b>
+<input type=number name=attr_RSgesamt disabled=true value="@{Ruestung1RS}+@{Ruestung2RS}+@{Ruestung3RS}+@{Ruestung4RS}">
 
 </td></tr>
-
 <tr><td colspan=2>
-<b>Basic Fantasy RPG Character Sheet for Roll20</b> v0.1
+<b>Das Schwarze Auge Character Sheet Roll20.net</b> v0.1
+<br><b>by Gereon Heinemann</b>
 </td></tr>
 
 </table>
