@@ -2,8 +2,8 @@
 <table border="1">
 
 <!-- top block --> 
-<tr><td colspan=3>     
-  <table border=1 width=100%>  
+<tr><td colspan=3>      
+  <table border=1 width=100%>   
     <tr> <!--Erste Zeile des Dokumentes-->
       <td width=50%><b>Name</b></td> 
       <td><input type=text size="30" name="attr_Name" /></td>
@@ -38,87 +38,131 @@
   </table>
 </td></tr>
 
-
-
-
-<tr><td valign=top>
+<tr><td valign=top width=40%>
 <!-- column 1 -->
 
   <div class=formblock>
-    <table width=100%>
-      <thead>
+    <table border=1>
       <tr>
         <td><b>Eigenschaften</b></td>
       </tr>
-      </thead>
       <tr>
         <td>Mut</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_MU"/><button type=roll value="/roll 1d20<@{MU}+?{Modifier|0} Mutprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_MU"/><button type=roll value="/roll 1d20<@{MU}+?{Modifier|0} Mutprobe"></button></td>
       </tr>
       <tr>
         <td>Klugheit</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_KL"/><button type=roll value="/roll 1d20<@{KL}+?{Modifier|0} Klugheitsprobe"></button></td>
+        <td><input type=number  style='width: 5em;' name="attr_KL"/><button type=roll value="/roll 1d20<@{KL}+?{Modifier|0} Klugheitsprobe"></button></td>
       </tr>
       <tr>
         <td>Intuition</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_IN"/><button type=roll value="/roll 1d20<@{IN}+?{Modifier|0} Intuitionsprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_IN"/><button type=roll value="/roll 1d20<@{IN}+?{Modifier|0} Intuitionsprobe"></button></td>
       </tr>
       <tr>
         <td>Charisma</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_CH"/><button type=roll value="/roll 1d20<@{CH}+?{Modifier|0} Charismaprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_CH"/><button type=roll value="/roll 1d20<@{CH}+?{Modifier|0} Charismaprobe"></button></td>
       </tr>
       <tr>
         <td>Fingerfertigkeit</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_FF"/><button type=roll value="/roll 1d20<@{FF}+?{Modifier|0} Fingerfertigkeitsprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_FF"/><button type=roll value="/roll 1d20<@{FF}+?{Modifier|0} Fingerfertigkeitsprobe"></button></td>
       </tr>
       <tr>
         <td>Gewandheit</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_GE"/><button type=roll value="/roll 1d20<@{GE}+?{Modifier|0} Gewandheitsprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_GE"/><button type=roll value="/roll 1d20<@{GE}+?{Modifier|0} Gewandheitsprobe"></button></td>
       </tr>
       <tr>
         <td>Konstitution</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_KO"/><button type=roll value="/roll 1d20<@{KO}+?{Modifier|0} Konstitutionsprobe" ></button></td>
+        <td><input type=number style='width: 5em;' name="attr_KO"/><button type=roll value="/roll 1d20<@{KO}+?{Modifier|0} Konstitutionsprobe" ></button></td>
       </tr>
       <tr>
         <td>Körperkraft</td>
-        <td><input type=number width=5 style='width: 5em;' name="attr_KK"/><button type=roll value="/roll 1d20<@{KK}+?{Modifier|0} Körperkraftprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_KK"/><button type=roll value="/roll 1d20<@{KK}+?{Modifier|0} Körperkraftprobe"></button></td>
       </tr>
-    </table>
+
   </div>
 
-</td><td valign=top>
+</td><td width=50%>
 <!-- column 2 -->
 
   <div class=sheet-formblock>
-    <b>Basiswerte</b>
-
-    <table width=100%>
+    <table border=1>
+    <td>
+        <b>Grundwerte</b> 
+    </td>
+    <td>
+        <b>Basis</b>
+    </td>
+    <td>
+        <b>Zugekauft</b>
+    </td>
+    <td>
+        <b>Maximal</b>
+    </td>
+    <td>
+        <b>Aktuell</b>
+    </td>
 
     <tr>
       <td>Lebenspunkte</td>
       <td>
-        <input type="number" name="attr_LE" style="width: 5em;" value="(@{KO}+@{KO}+@{KK})/2" disabled=true>
-    </td>
+        <input type="number" name="attr_LEGrundW" style="width: 5em;" value="(@{KO}+@{KO}+@{KK})/2" disabled=true>
+      </td>
+      <td>
+          <input type="number" name="attr_LEZugeK" style="width: 5em;">
+      </td>
+      <td>
+          <input type="number" name="attr_LE_max" style="width: 5em;" value="@{LEGrundW}+@{LEZugeK}" disabled=true>
+      </td>
+      <td>
+          <input type="number" name="attr_LEAktuell" style="width: 5em" value="@{LEMax}">
+      </td>
     </tr>
 
     <tr>
       <td>Ausdauer</td>
       <td>
-      <input name="attr_Ausdauer" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KO}+@{GE})/2">
+      <input name="attr_AusGrundW" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KO}+@{GE})/2">
     </td>
+      <td>
+          <input type="number" name="attr_AusZugeK" style="width: 5em;">
+      </td>
+      <td>
+          <input type="number" name="attr_Aus_max" style="width: 5em;" value="@{AusGrundW}+@{AusZugeK}" disabled=true>
+      </td>
+      <td>
+          <input type="number" name="attr_AusAktuell" style="width: 5em" value="@{AusMax}">
+      </td>
     </tr>
 
     <tr>
       <td>Astralenergie</td>
       <td>
-      <input name="attr_ASP" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{IN}+@{CH})/2">
+      <input name="attr_ASPGrundW" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{IN}+@{CH})/2">
+      </td>
+      <td>
+          <input type="number" name="attr_ASPZugeK" style="width: 5em;">
+      </td>
+      <td>
+          <input type="number" name="attr_ASP_max" style="width: 5em;" value="@{ASPGrundW}+@{ASPZugeK}" disabled=true>
+      </td>
+      <td>
+          <input type="number" name="attr_ASPAktuell" style="width: 5em" value="@{ASPMax}">
       </td>
     </tr>
 
     <tr>
       <td>Magieresistenz</td>
       <td>
-      <input name="attr_MR" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KL}+@{KO})/5">
+      <input name="attr_MRGrundW" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KL}+@{KO})/5">
+      </td>
+      <td>
+          <input type="number" name="attr_MRZugeK" style="width: 5em;">
+      </td>
+      <td>
+          <input type="number" name="attr_MR_max" style="width: 5em;" value="@{MRGrundW}+@{MRZugeK}" disabled=true>
+      </td>
+      <td>
+          <input type="number" name="attr_MRAktuell" style="width: 5em" value="@{MRMax}">
       </td>
     </tr>
 
@@ -141,6 +185,12 @@
       <td>
       <input name="attr_PABasis" style="width: 5em;" type="number" disabled=true value="(@{IN}+@{GE}+@{KK})/5">
       </td>
+      <td bgcolor=white colspan=2 align=right>
+          <b>Wundschwelle:</b>
+      </td>
+      <td bgcolor=white>
+          <input name="attr_Wundschwelle" style="width: 5em;" type="number" disabled=true value="@{KO}/2">
+      </td>
     </tr>
 
     <tr>
@@ -155,7 +205,6 @@
   </div>
 
 </td></tr>
-
 
 <tr><td valign=top colspan=2>
 <!-- column 1 -->
@@ -187,11 +236,9 @@
     <br>
     <textarea cols="30" name="attr_Equipment"></textarea>
   </div>
+  
 
-
-
-<table border=1>
-<tr><td valign=top colspan=2>
+<tr><td colspan=2>
     <h2>Talente</h2>
     <h3>Kampftechniken</h3>
      <b style='display: inline-block; width: 16em;'>Technik</b>
@@ -206,15 +253,18 @@
         <input type=number name=attr_TaW style='width: 5em;'>
       </fieldset>
       <br>
-
+      
     <h3>Körperliche Talente</h3>
-     <b style='display: inline-block; width: 22em;'>Talent</b>
+<b style='display: inline-block; width: 15em;'>Talent</b>
+     <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
      <b style='display: inline-block; width: 5em;'>TaW</b>
-     <br>
+    <!-- Altes Zeug. Erst löschen, wenn Überarbeitung fertig.
+    <br>
       <fieldset class=repeating_KoerperlicheTalente>
         <input type=text name=attr_TalentName style='width: 21em;'>
         <input type=number name=attr_TaW style='width: 5em;'>
-      </fieldset>
+      </fieldset> 
+     
 
     <h3>Gesellschaftliche Talente</h3>
      <b style='display: inline-block; width: 22em;'>Talent</b>
@@ -224,8 +274,7 @@
         <input type=text name=attr_TalentName style='width: 21em;'>
         <input type=number name=attr_TaW style='width: 5em;'>
       </fieldset>
-</td>
-<td>
+
     <h3>Natur-Talente</h3>
      <b style='display: inline-block; width: 22em;'>Talent</b>
      <b style='display: inline-block; width: 5em;'>TaW</b>
@@ -261,9 +310,252 @@
         <input type=text name=attr_TalentName style='width: 21em;'>
         <input type=number name=attr_TaW style='width: 5em;'>
       </fieldset>  
-</td> 
-    
-</table>
+      -->
+      
+      <fieldset class="repeating_KoerperlicheTalente">
+        <input type="text" name="attr_TalentName" style='width: 15em;'>
+        <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft2" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft3" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+        <input type="number" name="attr_TaW" style='width: 5em;'>
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1])+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+      </fieldset>
+        <h3>Gesellschaftliche Talente</h3>
+        <b style='display: inline-block; width: 15em;'>Talent</b>
+        <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
+        <b style='display: inline-block; width: 5em;'>TaW</b>
+        
+    <fieldset class="repeating_GesellschaftlicheTalente">
+        <input type="text" name="attr_TalentName" style='width: 15em;'>
+        <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+    		<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft2" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft3" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+        <input type="number" name="attr_TaW" style='width: 5em;'>
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+      </fieldset>
+      
+         <h3>Natur-Talente</h3>
+        <b style='display: inline-block; width: 15em;'>Talent</b>
+        <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
+        <b style='display: inline-block; width: 5em;'>TaW</b>
+        
+      <fieldset class="repeating_NaturTalente">
+        <input type="text" name="attr_TalentName" style='width: 15em;'>
+        <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+    		<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft2" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft3" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+        <input type="number" name="attr_TaW" style='width: 5em;'>
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+      </fieldset>
+
+        <h3>Wissenstalente</h3>
+        <b style='display: inline-block; width: 15em;'>Talent</b>
+        <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
+        <b style='display: inline-block; width: 5em;'>TaW</b>
+
+      <fieldset class="repeating_WissensTalente">
+        <input type="text" name="attr_TalentName" style='width: 15em;'>
+        <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+    		<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft2" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft3" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+        <input type="number" name="attr_TaW" style='width: 5em;'>
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+      </fieldset>
+
+        <h3>Sprachen & Schriften</h3>
+        <b style='display: inline-block; width: 15em;'>Talent</b>
+        <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
+        <b style='display: inline-block; width: 5em;'>TaW</b>
+
+            
+      <fieldset class="repeating_SprachenTalente">
+        <input type="text" name="attr_TalentName" style='width: 15em;'>
+        <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+    		<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft2" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft3" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+        <input type="number" name="attr_TaW" style='width: 5em;'>
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+      </fieldset>
+      
+
+        <h3>Handwerkliche Talente</h3>
+        <b style='display: inline-block; width: 15em;'>Talent</b>
+        <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
+        <b style='display: inline-block; width: 5em;'>TaW</b>
+
+            
+      <fieldset class="repeating_HandwerlicheTalente">
+        <input type="text" name="attr_TalentName" style='width: 15em;'>
+        <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+        	<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft2" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft3" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+        <input type="number" name="attr_TaW" style='width: 5em;'>
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+      </fieldset>
+</td></tr>
+
 
 <tr><td valign=top colspan=2>
 
@@ -337,7 +629,7 @@
 
 </td></tr>
 <tr><td colspan=2>
-<b>Das Schwarze Auge Character Sheet Roll20.net</b> v0.1
+<b>Das Schwarze Auge Character Sheet Roll20.net</b> v0.2
 <br><b>by Gereon Heinemann</b>
 </td></tr>
 
