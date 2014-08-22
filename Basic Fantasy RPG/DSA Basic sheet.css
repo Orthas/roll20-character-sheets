@@ -3,6 +3,14 @@
     font-weight: bold;
 }
 
+.sheet-skills{
+    display:inline-block;
+}
+
+
+.sheet-arrow:checked + *.sheet-skills{
+    display:none;
+}
 .charsheet td {
     padding-right: 1em;
 }
@@ -48,4 +56,3 @@
     padding: 0px;
     text-align: center;
 }
-
