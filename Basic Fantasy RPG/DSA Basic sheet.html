@@ -1,16 +1,17 @@
-<h1>Das Schwarze Auge</h1>
-<table border="1" width=70%>
+<h1 align= center style="font-family:'Vivaldi'; font-size:55px">Das Schwarze Auge</h1>
+<br>
+<table border="1" width=100% >
 
 <!-- top block --> 
-<tr><td colspan=3>       
-  <table border=1 width=100%>   
+<tr><td colspan=3>             
+  <table border=0 width=80%>   
     <tr> <!--Erste Zeile des Dokumentes-->
-      <td width=50%><b>Name</b></td> 
+      <td ><b>Name</b></td> 
       <td><input type=text size="30" name="attr_Name" /></td>
       <td width=50%>Rasse</td>
       <td><input type=text size="30" name="attr_Rasse" /></td>
       </td>
-    </tr>
+    </tr> 
     <tr>
       <td width=2>Kultur</td>
       <td><input type=text size="30" name="attr_Kultur" /></td>
@@ -42,9 +43,9 @@
 <!-- column 1 -->
 
   <div class=formblock>
-    <table border=1>
+    <table border=0>
       <tr>
-        <td><b>Eigenschaften</b></td>
+        <td><b style="font-size:15px">Eigenschaften</b></td>
       </tr>
       <tr>
         <td>Mut</td>
@@ -85,9 +86,9 @@
 <!-- column 2 -->
 
   <div class=sheet-formblock>
-    <table border=1>
+    <table border=0>
     <td>
-        <b>Grundwerte</b> 
+        <b  style="font-size:15px">Grundwerte</b> 
     </td>
     <td>
         <b>Basis</b>
@@ -111,10 +112,10 @@
           <input type="number" name="attr_LEZugeK" style="width: 5em;" value="0">
       </td>
       <td>
-          <input type="number" name="attr_LE_max" style="width: 5em;" value="@{LEGrundW}+@{LEZugeK}" disabled=true>
+          <input type="number" name="attr_LE_max" style="width: 5em;" value="(@{LEGrundW}+@{LEZugeK})" disabled=true>
       </td>
       <td>
-          <input type="number" name="attr_LEAktuell" style="width: 5em" value="@{LE_max}">
+          <input type="number" name="attr_LEAktuell" style="width: 5em" value="(@{LE_max})">
       </td>
     </tr>
 
@@ -184,10 +185,10 @@
       <td>
       <input name="attr_PABasis" style="width: 5em;" type="number" disabled=true value="(@{IN}+@{GE}+@{KK})/5">
       </td>
-      <td bgcolor=white colspan=2 align=right>
+      <td colspan=2 align=right>
           <b>Wundschwelle:</b>
       </td>
-      <td bgcolor=white>
+      <td >
           <input name="attr_Wundschwelle" style="width: 5em;" type="number" disabled=true value="@{KO}/2">
       </td>
     </tr>
@@ -206,9 +207,8 @@
 </td></tr>
 
 <tr><td valign=top colspan=2>
-<!-- column 1 -->
-<div class=formblock>
-    <b>Vermögen</b>
+<div>
+    <b  style="font-size:20px">Vermögen</b>
     <br>
     <table>
        <td>
@@ -230,26 +230,67 @@
     </table>
     
   </div>
-  <div class=formblock>
-    <b>Equipment</b>
+  <div >
+    <b style="font-size:25px">Equipment</b>
     <br>
-    <textarea cols="30" name="attr_Equipment"></textarea>
+    <table>
+    <tr><td colspan=2>
+    <textarea name="attr_Equipment1"></textarea>
+    </td>
+    <td>
+        <textarea name="attr_Equipment2"></textarea>
+    </td>
+    <td>
+        <textarea name="attr_Equipment3"></textarea>
+    </td>
+    <td>
+        <textarea name="attr_Equipment4"></textarea>
+    </td>
+    </tr>        
+    </table>
   </div>
   
 
 <tr><td colspan=2>
-        <b style="font-size:25px">Talente &nbsp;</b>
-        <input align=right type='checkbox' name='attr_SkillSection' class='arrow' style='width:15px; text-size: 8em;' /> verstecken        
-    <div class="sheet-skills">
-    <br>
+            
+            <b style="font-size:25px">Talente</b>
+            <input type='checkbox' name='attr_Talente' class='arrow' style='width:15px; text-size: 8em;' /> verstecken        
+            <div class="sheet-talente">
+            <br>
     <h3>Kampftechniken</h3>
      <b style='display: inline-block; width: 16em;'>Technik</b>
      <b style='display: inline-block; width: 3em;'>AT</b>
      <b style='display: inline-block; width: 3em;'>PA</b>
-     <b style='display: inline-block; width: 5em;'>TaW</b>
+     <b style='display: inline-block; width: 30em;'>TaW</b>
      <br>
       <fieldset class=repeating_Kampftechnik>
-        <input type=text name=attr_TechnikName style='width: 15em;'>
+        <select name="attr_TechnikName" class="atype" style="width: 15em;">
+            <option>Anderthalbhänder</option>
+            <option>Armbrust</option>
+            <option>Belagerungswaffen</option>
+            <option>Blasrohr</option>
+            <option>Bogen</option>
+            <option>Diskus</option>
+            <option>Dolche</option>
+            <option>Fechtwaffen</option>
+            <option>Hiebwaffen</option>
+            <option>Infanteriewaffen</option>
+            <option>Kettenstäbe</option>
+            <option>Kettenwaffen</option>
+            <option>Raufen</option>
+            <option>Ringen</option>
+            <option>Säbel</option>
+            <option>Schleuder</option>
+            <option>Schwerter</option>
+            <option>Speere</option>
+            <option>Stäbe</option>
+            <option>Wurfbeile</option>
+            <option>Wurfmesser</option>
+            <option>Wurfspeere</option>
+            <option>Zweihandflegel</option>
+            <option>Zweihand-Hiebwaffen</option>
+            <option>Zweihandschwerter-/säbel</option>
+        </select>
         <input type=number name=attr_AT style='width: 3em;'>
         <input type=number name=attr_PA style='width: 3em;'>
         <input type=number name=attr_TaW style='width: 5em;'>
@@ -261,60 +302,7 @@
      <b style='display: inline-block; width: 15em;'>Talent</b>
      <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
      <b style='display: inline-block; width: 5em;'>TaW</b>
-    <!-- Altes Zeug. Erst löschen, wenn Überarbeitung fertig.
-    <br>
-      <fieldset class=repeating_KoerperlicheTalente>
-        <input type=text name=attr_TalentName style='width: 21em;'>
-        <input type=number name=attr_TaW style='width: 5em;'>
-      </fieldset> 
-     
-
-    <h3>Gesellschaftliche Talente</h3>
-     <b style='display: inline-block; width: 22em;'>Talent</b>
-     <b style='display: inline-block; width: 5em;'>TaW</b>
-     <br>
-      <fieldset class=repeating_GesellschaftlicheTalente>
-        <input type=text name=attr_TalentName style='width: 21em;'>
-        <input type=number name=attr_TaW style='width: 5em;'>
-      </fieldset>
-
-    <h3>Natur-Talente</h3>
-     <b style='display: inline-block; width: 22em;'>Talent</b>
-     <b style='display: inline-block; width: 5em;'>TaW</b>
-     <br>
-      <fieldset class=repeating_NaturTalente>
-        <input type=text name=attr_TalentName style='width: 21em;'>
-        <input type=number name=attr_TaW style='width: 5em;'>
-      </fieldset>
-      
-    <h3>Wissenstalente</h3>
-     <b style='display: inline-block; width: 22em;'>Talent</b>
-     <b style='display: inline-block; width: 5em;'>TaW</b>
-     <br>
-      <fieldset class=repeating_NaturTalente>
-        <input type=text name=attr_TalentName style='width: 21em;'>
-        <input type=number name=attr_TaW style='width: 5em;'>
-      </fieldset>
-      
-    <h3>Sprachen & Schriften</h3>
-     <b style='display: inline-block; width: 22em;'>Talent</b>
-     <b style='display: inline-block; width: 5em;'>TaW</b>
-     <br>
-      <fieldset class=repeating_Sprachen>
-        <input type=text name=attr_TalentName style='width: 21em;'>
-        <input type=number name=attr_TaW style='width: 5em;'>
-      </fieldset>
-      
-     <h3>Handwerkliche Talente</h3>
-     <b style='display: inline-block; width: 22em;'>Talent</b>
-     <b style='display: inline-block; width: 5em;'>TaW</b>
-     <br>
-      <fieldset class=repeating_HandwerklicheTalente>
-        <input type=text name=attr_TalentName style='width: 21em;'>
-        <input type=number name=attr_TaW style='width: 5em;'>
-      </fieldset>  
-      -->
-      
+         
       <fieldset class="repeating_KoerperlicheTalente">
         <input type="text" name="attr_TalentName" style='width: 15em;'>
         <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
@@ -348,7 +336,7 @@
 			<option value="@{KK}">KK</option>
 		</select>
         <input type="number" name="attr_TaW" style='width: 5em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[Eigenshaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1" />
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1" />
         </fieldset>
 
         <h3>Gesellschaftliche Talente</h3>
@@ -559,8 +547,59 @@
 		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
       </fieldset>
       </div>
+
 </td></tr>
 
+<tr><td colspan=2>
+            <b style="font-size:25px">Zauber</b>
+            <input align=right type='checkbox' name='attr_Zauber' class='arrow' style='width:15px; text-size: 8em;' /> verstecken        
+            <div class="sheet-zauber">
+        <br>
+        <b style='display: inline-block; width: 15em;'>Name</b>
+        <b style='display: inline-block; width: 16em;'>Eigenschaften</b>
+        <b style='display: inline-block; width: 5em;'>ZfW</b>
+        <b style='display: inline-block; width: 5em;'>Kosten</b>
+        <b style='display: inline-block; width: 15em;'>Wirkung</b>
+
+            
+      <fieldset class="repeating_Zauber">
+        <input type="text" name="attr_ZauberName" style='width: 15em;'>
+        <select name="attr_Eigenschaft1" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+            <option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft2" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+		<select name="attr_Eigenschaft3" class="atype" style="width: 5em;">
+            <option value="@{MU}">MU</option>
+			<option value="@{KL}">KL</option>
+			<option value="@{IN}">IN</option>
+			<option value="@{CH}">CH</option>
+			<option value="@{FF}">FF</option>
+			<option value="@{GE}">GE</option>
+			<option value="@{KO}">KO</option>
+			<option value="@{KK}">KK</option>
+		</select>
+        <input type="number" name="attr_ZfW" style='width: 5em;'>
+        <input type="number" name="attr_ZauberKosten" style='width: 5em;'>
+        <input type="text" name="attr_ZauberWirkung" style='width: 15em;'>
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+      </fieldset>
+      </div>
 
 <tr><td valign=top colspan=2>
   
@@ -569,20 +608,21 @@
       <tr>
           <td>
               <b>AT-Basiswert</b>
-              <input name="ATBasis" type="number" style="width: 5em;" value="(@{MU}+@{GE}+@{KK})/5" disabled=true>
+              <input type="number" style="width: 5em;" value="@{APBasis}">
           </td>
           <td>
               <b>PA-Basiswert</b>
-              <input name="PABasis" type="number" style="width: 5em;" value="(@{IN}+@{GE}+@{KK})/5" disabled=true>
+              <input type="number" style="width: 5em;" value="@{PABasis}">
           </td>
           <td>
               <b>FK-Basiswert</b>
-              <input name="FKBasis" type="number" style="width: 5em;" value="(@{IN}+@{FF}+@{KK})/5" disabled=true>
+              <input  type="number" style="width: 5em;" value="@{FKBasis}">
           </td>
       </tr>
   </table>
   <br>
   <b style='display: inline-block; width: 10em;'>Nahkampfwaffe</b>
+  <b style='display: inline-block; width: 7em;'>Kampftalent</b>
   <b style='display: inline-block; width: 5em;'>TP</b>
   <b style='display: inline-block; width: 8.5em;'>TP/KK</b>
   <b style='display: inline-block; width: 5em;'>WM</b>
@@ -590,13 +630,40 @@
   <b style='display: inline-block; width: 5em;'>PA</b>
   <br>
   <fieldset class=repeating_NKW>
-    <input type=text name=attr_NKWName style='width: 10em;'>
-    <input type=text name=attr_TP style='width: 5em;'>
-    <input type=text name=attr_TPKK style='width: 5em;'>
-    <input type=number name=attr_WM1 style='width: 4em;'>
-    <input type=number name=attr_WM2 style='width: 4em;'>
-    <input type=number name=attr_AT style='width: 5em;'>
-    <input type=number name=attr_PA style='width: 5em;'>
+    <input type=text name="attr_NKWName" style='width: 10em;'>
+    <select name="attr_TechnikName" class="atype" style="width: 7em;">
+            <option>Anderthalbhänder</option>
+            <option>Armbrust</option>
+            <option>Belagerungswaffen</option>
+            <option>Blasrohr</option>
+            <option>Bogen</option>
+            <option>Diskus</option>
+            <option>Dolche</option>
+            <option>Fechtwaffen</option>
+            <option>Hiebwaffen</option>
+            <option>Infanteriewaffen</option>
+            <option>Kettenstäbe</option>
+            <option>Kettenwaffen</option>
+            <option>Raufen</option>
+            <option>Ringen</option>
+            <option>Säbel</option>
+            <option>Schleuder</option>
+            <option>Schwerter</option>
+            <option>Speere</option>
+            <option>Stäbe</option>
+            <option>Wurfbeile</option>
+            <option>Wurfmesser</option>
+            <option>Wurfspeere</option>
+            <option>Zweihandflegel</option>
+            <option>Zweihand-Hiebwaffen</option>
+            <option>Zweihandschwerter-/säbel</option>
+        </select>
+    <input type=text name="attr_TP" style='width: 5em;'>
+    <input type=text name="attr_TPKK" style='width: 5em;'>
+    <input type=number name="attr_WM1" style='width: 4em;'>
+    <input type=number name="attr_WM2" style='width: 4em;'>
+    <input type=number name="attr_AT" style='width: 5em;'>
+    <input type=number name="attr_PA" style='width: 5em;'>
   </fieldset>
   
   
@@ -650,7 +717,7 @@
 
 </td></tr>
 <tr><td colspan=2>
-<b>Das Schwarze Auge Character Sheet Roll20.net</b> v0.3
+<b>Das Schwarze Auge Character Sheet Roll20.net</b> v0.4
 <br><b>by Gereon Heinemann</b>
 </td></tr> 
 
