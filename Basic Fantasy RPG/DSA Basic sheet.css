@@ -1,14 +1,30 @@
+.charsheet {
+    background-image: url("http://freeseamlesstextures.com/images/28-faded-parchment-background-sml.jpg");
+}
+
+.charsheet {
+    font-family: "Aharoni";
+}
 
 .charsheet thead td {
     font-weight: bold;
 }
 
-.sheet-skills{
+.sheet-talente{
     display:inline-block;
 }
 
 
-.sheet-arrow:checked + *.sheet-skills{
+.sheet-arrow:checked + *.sheet-talente{
+    display:none;
+}
+
+.sheet-zauber{
+    display:inline-block;
+}
+
+
+.sheet-arrow:checked + *.sheet-zauber{
     display:none;
 }
 .charsheet td {
