@@ -2,8 +2,8 @@
 <br>
 <table border="1" width=100% >
 
-<!-- top block --> 
-<tr><td colspan=3>             
+<!-- top block -->   
+<tr><td colspan=3>               
   <table border=0 width=80%>   
     <tr> <!--Erste Zeile des Dokumentes-->
       <td ><b>Name</b></td> 
@@ -20,15 +20,15 @@
     </tr>
     <tr>
             <td width=50%>Stand</td>
-            <td><input type=text size="20" name="attr_Stand"></td>
+            <td><input type=text size="20" name="attr_Stand" /></td>
             <td width=50%>Sozialstatus</td>
-            <td><input type=text size="20" name="attr_Sozialstatus"></td>
+            <td><input type=text size="20" name="attr_Sozialstatus"/></td>
         </tr>
          <tr>
             <td>Geschlecht</td>
-            <td><input type=text size="50" name="attr_Geschlecht"></td>
+            <td><input type=text size="50" name="attr_Geschlecht" /></td>
             <td>Alter</td>
-            <td><input type=text size="10" name="attr_Alter"></td>
+            <td><input type=text size="10" name="attr_Alter" /></td>
         </tr>
         <tr>
             <td>Grösse</td>
@@ -49,35 +49,39 @@
       </tr>
       <tr>
         <td>Mut</td>
-        <td><input type=number style='width: 5em;' name="attr_MU"/><button type=roll value="/roll 1d20<@{MU}+?{Modifier|0} Mutprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_MU"/><button type=roll value="/roll 1d20<@{MU}+?{Modifier|0} Mutprobe"></button><button type=roll value="/gr 1d20<@{MU}+?{Modifier|0} Mutprobe">GM</button></td>
       </tr>
       <tr>
         <td>Klugheit</td>
-        <td><input type=number  style='width: 5em;' name="attr_KL"/><button type=roll value="/roll 1d20<@{KL}+?{Modifier|0} Klugheitsprobe"></button></td>
+        <td><input type=number  style='width: 5em;' name="attr_KL"/><button type=roll value="/roll 1d20<@{KL}+?{Modifier|0} Klugheitsprobe"></button><button type=roll value="/gr 1d20<@{KL}+?{Modifier|0} Klugheitsprobe">GM</button></td>
       </tr>
       <tr>
         <td>Intuition</td>
-        <td><input type=number style='width: 5em;' name="attr_IN"/><button type=roll value="/roll 1d20<@{IN}+?{Modifier|0} Intuitionsprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_IN"/><button type=roll value="/roll 1d20<@{IN}+?{Modifier|0} Intuitionsprobe"></button><button type=roll value="/gr 1d20<@{IN}+?{Modifier|0} Intuitionsprobe">GM</button></td>
       </tr>
       <tr>
         <td>Charisma</td>
-        <td><input type=number style='width: 5em;' name="attr_CH"/><button type=roll value="/roll 1d20<@{CH}+?{Modifier|0} Charismaprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_CH"/><button type=roll value="/roll 1d20<@{CH}+?{Modifier|0} Charismaprobe"></button><button type=roll value="/gr 1d20<@{CH}+?{Modifier|0} Charismaprobe">GM</button></td>
       </tr>
       <tr>
         <td>Fingerfertigkeit</td>
-        <td><input type=number style='width: 5em;' name="attr_FF"/><button type=roll value="/roll 1d20<@{FF}+?{Modifier|0} Fingerfertigkeitsprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_FF"/><button type=roll value="/roll 1d20<@{FF}+?{Modifier|0} Fingerfertigkeitsprobe"></button><button type=roll value="/gr 1d20<@{FF}+?{Modifier|0} Fingerfertigkeitsprobe">GM</button></td>
       </tr>
       <tr>
         <td>Gewandheit</td>
-        <td><input type=number style='width: 5em;' name="attr_GE"/><button type=roll value="/roll 1d20<@{GE}+?{Modifier|0} Gewandheitsprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_GE"/><button type=roll value="/roll 1d20<@{GE}+?{Modifier|0} Gewandheitsprobe"></button><button type=roll value="/gr 1d20<@{GE}+?{Modifier|0} Gewandheitsprobe">GM</button></td>
       </tr>
       <tr>
         <td>Konstitution</td>
-        <td><input type=number style='width: 5em;' name="attr_KO"/><button type=roll value="/roll 1d20<@{KO}+?{Modifier|0} Konstitutionsprobe" ></button></td>
+        <td><input type=number style='width: 5em;' name="attr_KO"/><button type=roll value="/roll 1d20<@{KO}+?{Modifier|0} Konstitutionsprobe" ></button><button type=roll value="/gr 1d20<@{KO}+?{Modifier|0} Konstitutionsprobe">GM</button></td>
       </tr>
       <tr>
         <td>Körperkraft</td>
-        <td><input type=number style='width: 5em;' name="attr_KK"/><button type=roll value="/roll 1d20<@{KK}+?{Modifier|0} Körperkraftprobe"></button></td>
+        <td><input type=number style='width: 5em;' name="attr_KK"/><button type=roll value="/roll 1d20<@{KK}+?{Modifier|0} Körperkraftprobe"></button><button type=roll value="/gr 1d20<@{KK}+?{Modifier|0} Körperkraftprobe">GM</button></td>
+      </tr>
+      <tr>
+        <td>Geschwindigkeit</td>
+        <td><input type=number style='width: 5em;' name="attr_GS"/></td>
       </tr>
 
   </div>
@@ -106,23 +110,23 @@
     <tr>
       <td>Lebenspunkte</td>
       <td>
-        <input type="number" name="attr_LEGrundW" style="width: 5em;" value="(@{KO}+@{KO}+@{KK})/2" disabled=true>
+        <input type=number name="attr_LEGrundW" style="width: 5em;" value="ceil((@{KO}+@{KO}+@{KK})/2)" disabled=true>
       </td>
       <td>
-          <input type="number" name="attr_LEZugeK" style="width: 5em;" value="0">
+          <input type=number name="attr_LEZugeK" style="width: 5em;" value="0">
       </td>
       <td>
-          <input type="number" name="attr_LE_max" style="width: 5em;" value="(@{LEGrundW}+@{LEZugeK})" disabled=true>
+          <input type=number name="attr_LE_max" style="width: 5em;" value="(@{LEGrundW}+@{LEZugeK})" disabled=true>
       </td>
       <td>
-          <input type="number" name="attr_LEAktuell" style="width: 5em" value="(@{LE_max})">
+          <input type=number name="attr_LEAktuell" style="width: 5em" value="(@{LE_max})">
       </td>
     </tr>
 
     <tr>
       <td>Ausdauer</td>
       <td>
-      <input name="attr_AusGrundW" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KO}+@{GE})/2">
+      <input name="attr_AusGrundW" style="width: 5em;" type="number" disabled=true value="ceil((@{MU}+@{KO}+@{GE})/2)">
     </td>
       <td>
           <input type="number" name="attr_AusZugeK" style="width: 5em;" value="0">
@@ -138,7 +142,7 @@
     <tr>
       <td>Astralenergie</td>
       <td>
-      <input name="attr_ASPGrundW" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{IN}+@{CH})/2">
+      <input name="attr_ASPGrundW" style="width: 5em;" type="number" disabled=true value="ceil((@{MU}+@{IN}+@{CH})/2)">
       </td>
       <td>
           <input type="number" name="attr_ASPZugeK" style="width: 5em;" value="0">
@@ -150,11 +154,31 @@
           <input type="number" name="attr_ASPAktuell" style="width: 5em" value="@{ASP_max}">
       </td>
     </tr>
-
+    
+    <tr>
+      <td>Karmaenergie</td>
+      <td>
+      <select name="attr_KEGrundW" class="atype" style="width: 5em;">
+          <option value="">&nbsp;</option>
+          <option value="12">12</option>
+          <option value="24">24</option>
+      </select>
+      </td>
+      <td>
+          <input type="number" name="attr_KEZugeK" style="width: 5em;" value="0">
+      </td>
+      <td>
+          <input type="number" name="attr_KE_max" style="width: 5em;" value="@{KEGrundW}+@{KEZugeK}" disabled=true>
+      </td>
+      <td>
+          <input type="number" name="attr_ASPAktuell" style="width: 5em" value="@{KE_max}">
+      </td>
+    </tr>
+    
     <tr>
       <td>Magieresistenz</td>
       <td>
-      <input name="attr_MRGrundW" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{KL}+@{KO})/5">
+      <input name="attr_MRGrundW" style="width: 5em;" type="number" disabled=true value="ceil((@{MU}+@{KL}+@{KO})/5)">
       </td>
       <td>
           <input type="number" name="attr_MRZugeK" style="width: 5em;" value="0">
@@ -166,37 +190,43 @@
           <input type="number" name="attr_MRAktuell" style="width: 5em" value="@{MR_max}">
       </td>
     </tr>
-
+ 
     <tr>
       <td>INI-Basiswert</td>
       <td>
-      <input name="attr_INIBasis" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{MU}+@{IN}+@{GE})/5">
+      <input name="attr_INIBasis" style="width: 5em;" type="number" disabled=true value="ceil((@{MU}+@{MU}+@{IN}+@{GE})/5)">
+      </td>
+      <td>
+          <input name="attr_INIZugeK" style="width: 5em;" type=number value="0">
+      </td>
+      <td>
+          <input name="attr_INI_max" style="width: 5em;" type=number disabled=true value="@{INIBasis}+@{INIZugeK}">
       </td>
     </tr>
 
     <tr>
       <td>AT-Basiswert</td>
       <td>
-      <input name="attr_ATBasis" style="width: 5em;" type="number" disabled=true value="(@{MU}+@{GE}+@{KK})/5">
+      <input name=attr_ATBasis style="width: 5em;" type=number disabled=true value="ceil((@{MU}+@{GE}+@{KK})/5)">
       </td>
     </tr>
     <tr>
       <td>PA-Basiswert</td>
       <td>
-      <input name="attr_PABasis" style="width: 5em;" type="number" disabled=true value="(@{IN}+@{GE}+@{KK})/5">
+      <input name=attr_PABasis style='width: 5em;' type=number disabled=true value="ceil((@{IN}+@{GE}+@{KK})/5)">
       </td>
       <td colspan=2 align=right>
           <b>Wundschwelle:</b>
       </td>
       <td >
-          <input name="attr_Wundschwelle" style="width: 5em;" type="number" disabled=true value="@{KO}/2">
+          <input name="attr_Wundschwelle" style='width: 5em;' type=number disabled=true value="ceil(@{KO}/2)">
       </td>
     </tr>
 
     <tr>
       <td>FK-Basiswert</td>
       <td>
-      <input name="attr_FKBasis" style="width: 5em;" type="number" disabled=true value="(@{IN}+@{FF}+@{KK})/5">
+      <input name=attr_FKBasis style='width: 5em;' type=number disabled=true value="ceil((@{IN}+@{FF}+@{KK})/5)">
       </td>
     </tr>
 
@@ -205,31 +235,39 @@
   </div>
 
 </td></tr>
-
-<tr><td valign=top colspan=2>
 <div>
+<tr><td colspan=2>
     <b  style="font-size:20px">Vermögen</b>
     <br>
     <table>
-       <td>
-          <tb>Dukaten</tb> 
-          <tb><input type=number></tb>
-       </td> 
-       <td>
-          <tb>Silbertaler</tb> 
-          <tb><input type=number></tb>
-       </td>
-       <td>
-          <tb>Heller</tb> 
-          <tb><input type=number></tb>
-       </td> 
-       <td>
-          <tb>Kreuzer</tb> 
-          <tb><input type=number></tb>
-       </td> 
+        <tr>
+            <td>
+                Dukaten
+            </td>
+            <td>
+                <input type=number name="attr_Dukaten"/>&nbsp; &nbsp;
+            </td>
+            <td>
+                Silbertaler
+            </td>
+            <td>
+                <input type=number name="attr_Silber"/>&nbsp; &nbsp;
+            </td>
+            <td>
+                Heller
+            </td>
+            <td>
+                <input type=number name="attr_Heller"/>&nbsp; &nbsp;
+            </td>
+            <td>
+                Kreuzer
+            </td>
+            <td>
+                <input type=number name="attr_Kreuzer"/>
+            </td>
+        </tr>
     </table>
-    
-  </div>
+</div>   
   <div >
     <b style="font-size:25px">Equipment</b>
     <br>
@@ -336,7 +374,8 @@
 			<option value="@{KK}">KK</option>
 		</select>
         <input type="number" name="attr_TaW" style='width: 5em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1" />
+		<button type="roll" name="roll_KoerperlicheTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1"></button>
+        <button type="roll" name="roll_KoerperlicheTalente" value="/gr @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1">GM</button>
         </fieldset>
 
         <h3>Gesellschaftliche Talente</h3>
@@ -377,7 +416,8 @@
 			<option value="@{KK}">KK</option>
 		</select>
         <input type="number" name="attr_TaW" style='width: 5em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+		<button type="roll" name="roll_GesellschaftlicheTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1"></button>
+        <button type="roll" name="roll_GesellschaftlicheTalente" value="/gr @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1">GM</button>
       </fieldset>
 
          <h3>Natur-Talente</h3>
@@ -418,7 +458,8 @@
 			<option value="@{KK}">KK</option>
 		</select>
         <input type="number" name="attr_TaW" style='width: 5em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+		<button type="roll" name="roll_NaturTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1"></button>
+        <button type="roll" name="roll_NaturTalente" value="/gr @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1">GM</button>
       </fieldset>
       
         <h3>Wissenstalente</h3>
@@ -459,7 +500,8 @@
 			<option value="@{KK}">KK</option>
 		</select>
         <input type="number" name="attr_TaW" style='width: 5em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+		<button type="roll" name="roll_Wissenstalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1"></button>
+        <button type="roll" name="roll_Wissenstalente" value="/gr @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1">GM</button>
       </fieldset>
 
         <h3>Sprachen & Schriften</h3>
@@ -501,7 +543,8 @@
 			<option value="@{KK}">KK</option>
 		</select>
         <input type="number" name="attr_TaW" style='width: 5em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+		<button type="roll" name="roll_SprachenTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1"></button>
+        <button type="roll" name="roll_SprachenTalente" value="/gr @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1">GM</button>
       </fieldset>
 
 
@@ -544,7 +587,8 @@
 			<option value="@{KK}">KK</option>
 		</select>
         <input type="number" name="attr_TaW" style='width: 5em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+		<button type="roll" name="roll_HandwerklicheTalente" value="/r @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1"></button>
+        <button type="roll" name="roll_HandwerklicheTalente" value="/gr @{TaW}[@{TalentName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1">GM</button>
       </fieldset>
       </div>
 
@@ -597,26 +641,49 @@
         <input type="number" name="attr_ZfW" style='width: 5em;'>
         <input type="number" name="attr_ZauberKosten" style='width: 5em;'>
         <input type="text" name="attr_ZauberWirkung" style='width: 15em;'>
-		<button type="roll" name="roll_KoerperlicheTalente" value="/r {(1d20-@{Eigenschaft1}[Eigenshaft1)+(1d20-@{Eigenschaft2}[Eigenschaft2])+(1d20-@{Eigenschaft3}[Eigenschaft3])-@{TaW}[@{TalentName}]}" />
+		<button type="roll" name="roll_Zauber" value="/r @{ZfW}[@{ZauberName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1"></button>
+        <button type="roll" name="roll_Zauber" value="/gr @{ZfW}[@{ZauberName}] - {1d20 - @{Eigenschaft1}[@Eigenschaft1], 0d1}kh1 - {1d20 - @{Eigenschaft2}[Eigenschaft2], 0d1}kh1- {1d20 - @{Eigenschaft3}[Eigenschaft3], 0d1}kh1">GM</button>
       </fieldset>
       </div>
 
+</td></tr>
+<tr><td colspan=2>
+            
+            <b style="font-size:25px">Liturgien</b>
+            <input type='checkbox' name='attr_Liturgien' class='arrow' style='width:15px; text-size: 8em;' /> verstecken        
+            <div class="sheet-liturgien">
+            <br>
+            <b>Liturgiekenntnis</b>
+            <input type="number" name="attr_Liturgiekenntnis" style='width: 5em;'>
+            <br>
+        <b style='display: inline-block; width: 15em;'>Name</b>
+        <b style='display: inline-block; width: 5em;'>Grad</b>
+        <b style='display: inline-block; width: 35em;'>Wirkung</b>
+
+        <fieldset class="repeating_Liturgien">
+        <input type="text" name="attr_LiturgieName" style='width: 15em;'>
+        <input type="number" name="attr_LiturgieGrad" style='width: 5em;'>
+        <input type="text" name="attr_LiturgieWirkung" style='width: 25em;'>
+        <button type="roll" name="roll_Liturgie" value="/r @{Liturgiekenntnis}[Liturgiekenntnis] - {1d20 - @{MU}[Mut], 0d1}kh1 - {1d20 - @{IN}[Intuition], 0d1}kh1- {1d20 - @{CH}[Charisma], 0d1}kh1"></button>
+        <button type="roll" name="roll_Liturgie" value="/gr @{Liturgiekenntnis}[Liturgiekenntnis] - {1d20 - @{MU}[Mut], 0d1}kh1 - {1d20 - @{IN}[Intuition], 0d1}kh1- {1d20 - @{CH}[Charisma], 0d1}kh1">GM</button>
+        </fieldset>
+</td></tr>
 <tr><td valign=top colspan=2>
-  
+
   <h2>Waffen & Kampfwerte</h2>
-  <table width=90%>
+  <table>
       <tr>
           <td>
               <b>AT-Basiswert</b>
-              <input type="number" style="width: 5em;" value="@{APBasis}">
+              <input type=number name="attr_ATBasis2" style='width: 5em;' value="@{ATBasis}" disabled=true />
           </td>
           <td>
               <b>PA-Basiswert</b>
-              <input type="number" style="width: 5em;" value="@{PABasis}">
+              <input type=number name="attr_PABasis2" style='width: 5em;' value="@{PABasis}" disabled=true />
           </td>
           <td>
               <b>FK-Basiswert</b>
-              <input  type="number" style="width: 5em;" value="@{FKBasis}">
+              <input  type=number name="attr_FKBasis2" style='width: 5em;' value="@{FKBasis}" disabled=true/>
           </td>
       </tr>
   </table>
@@ -717,7 +784,7 @@
 
 </td></tr>
 <tr><td colspan=2>
-<b>Das Schwarze Auge Character Sheet Roll20.net</b> v0.4
+<b>Das Schwarze Auge Character Sheet Roll20.net</b> v0.5
 <br><b>by Gereon Heinemann</b>
 </td></tr> 
 
